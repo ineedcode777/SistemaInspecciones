@@ -1,6 +1,7 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using SistemaInspecciones.Application;
 using SistemaInspecciones.Application.Settings;
 using SistemaInspecciones.Infrastructure;
 
@@ -11,6 +12,7 @@ builder.Services.AddControllers();
 
 // Infrastructure (DbContext + Repositorios)
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddApplicationServices();
 
 // JwtSettings tipado
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
