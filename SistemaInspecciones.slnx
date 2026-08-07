@@ -1,1 +1,9 @@
-<Solution />
+<Solution>
+  <Project Path="SistemaInspecciones.Api/SistemaInspecciones.Api.csproj" />
+  <Project Path="SistemaInspecciones.Application/SistemaInspecciones.Application.csproj" />
+  <Project Path="SistemaInspecciones.Domain/SistemaInspecciones.Domain.csproj" />
+  <Project Path="SistemaInspecciones.Infrastructure/SistemaInspecciones.Infrastructure.csproj" />
+  <Project Path="SistemaInspecciones.Mobile/SistemaInspecciones.Mobile.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>
