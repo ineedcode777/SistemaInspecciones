@@ -6,6 +6,10 @@ using SistemaInspecciones.Application.Settings;
 using SistemaInspecciones.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(7178, listenOptions => listenOptions.UseHttps());
+});
 
 // Controllers
 builder.Services.AddControllers();
